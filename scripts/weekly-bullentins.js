@@ -4,7 +4,7 @@ $(function () {
         success: function (data) {
             data.forEach(bulletin => {
                 addBulletin(bulletin);
-            });
+            });            
         }
     });
 
