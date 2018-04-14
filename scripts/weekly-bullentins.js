@@ -56,11 +56,18 @@ $(function () {
 
         var friendlyName = bulletinName;
 
-        // Expected naming convention "yyyy-mm-dd name of file.html"
+        // Expected naming convention "yyyy-mm-dd name of file.html | .htm"
         var regex = /\D*\d+\D\d+\D\d+/;
         var datePart = regex.exec(bulletinName.trim());
         if (datePart && datePart.length > 0) {
-            friendlyName = bulletinName.slice(datePart[0].length, -5).trim(); // -5 => .html
+            var extensionLength = 0;
+            if (bulletinName.toLowerCase().endsWith(".html")) {
+                extensionLength = -5;
+            }
+            else if (bulletinName.toLowerCase().endsWith(".htm")) {
+                extensionLength = -4;
+            }
+            friendlyName = bulletinName.slice(datePart[0].length, extensionLength).trim(); // -5 => .html | -4 => .htm
         }
         else {
             console.warn(`Failed to locate the date as part of the filename. ${bulletinName}`);
