@@ -2,7 +2,9 @@ $(function () {
     $.ajax({
         url: "https://api.github.com/repos/sfa-bc/sfa-site/contents/bulletins",
         success: function (data) {
-            data.forEach(bulletin => {
+            // Naming convention stores bulleting in date order,
+            // reverse it so the newest are at the top
+            data.slice().reverse().forEach(bulletin => {
                 addBulletin(bulletin);
             });            
         }
