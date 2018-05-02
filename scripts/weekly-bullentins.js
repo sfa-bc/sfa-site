@@ -2,11 +2,12 @@ $(function () {
     $.ajax({
         url: "https://api.github.com/repos/sfa-bc/sfa-site/contents/bulletins",
         success: function (data) {
-            // Naming convention stores bulleting in date order,
+            // Naming convention stores bulletins in date order,
             // reverse it so the newest are at the top
-            data.slice().reverse().forEach(bulletin => {
+            for (var i = data.length - 1; i >= 0; i--) {
+                var bulletin = data[i];
                 addBulletin(bulletin);
-            });            
+            }
         }
     });
 
