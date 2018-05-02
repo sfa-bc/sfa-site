@@ -19,10 +19,9 @@ $(function () {
         var dateString = getBulletinDate(bulletin.name);
         var friendlyName = getBulletinFriendlyName(bulletin.name);
 
-        var tr = `<tr>
-                    <td scope="row">${dateString}</td>
-                    <td><a href="weekly-bulletin.html?bulletin=${bulletin.path}">${friendlyName}</a></td>
-                  </tr>`;
+        var tr = "<tr><td scope=\"row\">" + dateString + "</td>";
+            tr += "<td><a href=\"weekly-bulletin.html?bulletin=" + bulletin.path + "\">" + friendlyName + "</a></td>";
+            tr += "</tr>";
 
         bulletinList.append(tr);
     }
@@ -42,14 +41,14 @@ $(function () {
                 var month = dateTokens[1];
                 var day = dateTokens[2];
 
-                dateString = `${day}-${month}-${year}`;
+                dateString = day + "-" + month + "-" + year;
             }
             else {
-                console.warn(`Incorrect number of date components included as part of the filename. ${bulletinName}`);
+                console.warn("Incorrect number of date components included as part of the filename. " + bulletinName);
             }
         }
         else {
-            console.warn(`Failed to locate the date as part of the filename. ${bulletinName}`);
+            console.warn("Failed to locate the date as part of the filename. " + bulletinName);
         }
 
         return dateString;
@@ -64,18 +63,23 @@ $(function () {
         var datePart = regex.exec(bulletinName.trim());
         if (datePart && datePart.length > 0) {
             var extensionLength = 0;
-            if (bulletinName.toLowerCase().endsWith(".html")) {
+            if (endsWith(bulletinName.toLowerCase(), ".html")) {
                 extensionLength = -5;
             }
-            else if (bulletinName.toLowerCase().endsWith(".htm")) {
+            else if (endsWith(bulletinName.toLowerCase(), ".htm")) {
                 extensionLength = -4;
             }
             friendlyName = bulletinName.slice(datePart[0].length, extensionLength).trim(); // -5 => .html | -4 => .htm
+            // friendlyName = bulletinName.substring(datePart[0].length, bulletinName.length - extensionLength - datePart[0].length);
         }
         else {
-            console.warn(`Failed to locate the date as part of the filename. ${bulletinName}`);
+            console.warn("Failed to locate the date as part of the filename. " + bulletinName);
         }
         
         return friendlyName;
+    }
+
+    function endsWith(s, suffix) {
+        return s.indexOf(suffix, s.length - suffix.length) !== -1;
     }
 });
