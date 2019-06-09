@@ -1,0 +1,262 @@
+[
+    {
+        "item": "Christ in Majesty",
+        "amount": "£5,000",
+        "donated": true
+    },
+    {
+        "item": "St Peter",
+        "amount": "£3,000",
+        "donated": false
+    },
+    {
+        "item": "St Paul",
+        "amount": "£3,000",
+        "donated": false
+    },
+    {
+        "item": "Bl. Robert Grissold",
+        "amount": "£3,000",
+        "donated": false
+    },
+    {
+        "item": "Bl. John Sugar",
+        "amount": "£3,000",
+        "donated": false
+    },
+    {
+        "item": "Angel 1 of Nativity",
+        "amount": "£40",
+        "donated": false
+    },
+    {
+        "item": "Angel 2 of Nativity",
+        "amount": "£40",
+        "donated": false
+    },
+    {
+        "item": "Shepherd 1 of Nativity",
+        "amount": "£30",
+        "donated": false
+    },
+    {
+        "item": "Shepherd 2 of Nativity",
+        "amount": "£30",
+        "donated": false
+    },
+    {
+        "item": "Shepherd 3 of Nativity",
+        "amount": "£30",
+        "donated": false
+    },
+    {
+        "item": "Shepherd 4 of Nativity",
+        "amount": "£30",
+        "donated": false
+    },
+    {
+        "item": "Sheep 1 of Nativity",
+        "amount": "£25",
+        "donated": false
+    },
+    {
+        "item": "Sheep 2 of Nativity",
+        "amount": "£25",
+        "donated": false
+    },
+    {
+        "item": "Sheep 3 of Nativity",
+        "amount": "£25",
+        "donated": false
+    },
+    {
+        "item": "Sheep 4 of Nativity",
+        "amount": "£25",
+        "donated": false
+    },
+    {
+        "item": "Sheep 5 of Nativity",
+        "amount": "£25",
+        "donated": false
+    },
+    {
+        "item": "Sheep 6 of Nativity",
+        "amount": "£25",
+        "donated": false
+    },
+    {
+        "item": "Lamb 1 of Nativity",
+        "amount": "£20",
+        "donated": false
+    },
+    {
+        "item": "Lamb 2 of Nativity",
+        "amount": "£20",
+        "donated": false
+    },
+    {
+        "item": "Seraph 1",
+        "amount": "£2,000",
+        "donated": false
+    },
+    {
+        "item": "Seraph 2",
+        "amount": "£2,000",
+        "donated": false
+    },
+    {
+        "item": "St Wulstan",
+        "amount": "£3,000",
+        "donated": false
+    },
+    {
+        "item": "St Qswald",
+        "amount": "£3,000",
+        "donated": false
+    },
+    {
+        "item": "Abraham",
+        "amount": "£500",
+        "donated": false
+    },
+    {
+        "item": "Angel Guests",
+        "amount": "£500",
+        "donated": false
+    },
+    {
+        "item": "Sara",
+        "amount": "£500",
+        "donated": false
+    },
+    {
+        "item": "Abraham & Isaac",
+        "amount": "£500",
+        "donated": false
+    },
+    {
+        "item": "Melchizedek",
+        "amount": "£500",
+        "donated": false
+    },
+    {
+        "item": "St Francis",
+        "amount": "£500",
+        "donated": true
+    },
+    {
+        "item": "Noah",
+        "amount": "£500",
+        "donated": false
+    },
+    {
+        "item": "Birds & Animals (each)",
+        "amount": "£40-£60",
+        "donated": false
+    },
+    {
+        "item": "Isaiah",
+        "amount": "£2,000",
+        "donated": false
+    },
+    {
+        "item": "Malachi",
+        "amount": "£2,000",
+        "donated": false
+    },
+    {
+        "item": "Ezekiel",
+        "amount": "£2,000",
+        "donated": false
+    },
+    {
+        "item": "Zechariah",
+        "amount": "£2,000",
+        "donated": false
+    },
+    {
+        "item": "Cross in Glory",
+        "amount": "£1,000",
+        "donated": false
+    },
+    {
+        "item": "Angel 1 of Apocalypse",
+        "amount": "£1,000",
+        "donated": false
+    },
+    {
+        "item": "Angel 2 of Apocalypse",
+        "amount": "£1,000",
+        "donated": false
+    },
+    {
+        "item": "Bethlehem & Sheep",
+        "amount": "£1,000",
+        "donated": false
+    },
+    {
+        "item": "Jerusalem & Sheep",
+        "amount": "£1,000",
+        "donated": false
+    },
+    {
+        "item": "Text of the 'Te Deum'",
+        "amount": "£1,500",
+        "donated": false
+    },
+    {
+        "item": "Text of the 'Gloria'",
+        "amount": "£1,500",
+        "donated": false
+    },
+    {
+        "item": "Drapery around Tabernacle",
+        "amount": "£1,000",
+        "donated": false
+    },
+    {
+        "item": "Stylised Building behind the Sacred Heart",
+        "amount": "£750",
+        "donated": false
+    },
+    {
+        "item": "Stylised Building behind the Our Lady",
+        "amount": "£750",
+        "donated": false
+    },
+    {
+        "item": "Pillar in nave (8 in total; price of pillar)",
+        "amount": "£100",
+        "donated": false
+    },
+    {
+        "item": "Bay of chancel ceiling (8 in total; price of each bay)",
+        "amount": "£50",
+        "donated": false
+    },
+    {
+        "item": "Bay of nave ceiling (60 in total; price of each bay)",
+        "amount": "£30",
+        "donated": false
+    },
+    {
+        "item": "Decoration of organ",
+        "amount": "£2,000",
+        "donated": false
+    },
+    {
+        "item": "Decoration of alter rails",
+        "amount": "£200",
+        "donated": false
+    },
+    {
+        "item": "Decoration of metal door into former Sisters' Choir",
+        "amount": "£200",
+        "donated": false
+    },
+    {
+        "item": "Pot of Paint",
+        "amount": "£15",
+        "donated": false
+    }
+]
