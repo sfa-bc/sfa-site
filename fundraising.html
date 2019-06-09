@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/site.css" />
     <link rel="icon" type="image/jpg" href="images/favion.jpg">
 
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/78d502f02b.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140852420-1"></script>
     <script>
@@ -68,6 +71,7 @@
             <div class="row">
                 <div class="col-md-10">
                     <h2>Fundraising for St. Francis of Assisi Catholic Church</h2>
+                    <h4>The Restoration Project</h4>
                     <p>
                         Next year (2020), we shall be celebrating the 150th anniversary of the opening of the present
                         church of St Francis of Assisi on 4th October 1870
@@ -104,13 +108,31 @@
                     <p>
                         We need to raise £120,000 to pay for the work,
                     </p>
+                    <h4>How can you help?</h4>
+                    <p>
+                        Below is a list of items you can sponsor to help with the restoration.</p>
                     <p>
                         If you can help us, please send a cheque to St Francis Presbytery, Rising Lane, Baddesley
-                        Clinton, Knowle, B93 0DD, England.
+                        Clinton, Knowle, B93 0DD, England, indicating the item you would to sponsor.
                     </p>
+                    <h5><span class="badge badge-secondary">
+                            The names of all donors will be recorded in a special book and Mass will be offered every
+                            month for their intentions.
+                        </span>
+                    </h5>
                     <p>
-                        The names of all donors will be recorded in a special book and Mass will be offered every month
-                        for their intentions.</p>
+                        <table id="fundraising-item-list" class="table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Donated</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </p>
                 </div>
             </div>
             <hr>
@@ -119,15 +141,15 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="scripts/fundraising-items.js"></script>
 </body>
 
 </html>

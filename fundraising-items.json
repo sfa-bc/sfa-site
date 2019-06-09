@@ -27,22 +27,22 @@
     {
         "item": "Angel 1 of Nativity",
         "amount": "£40",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Angel 2 of Nativity",
         "amount": "£40",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Shepherd 1 of Nativity",
         "amount": "£30",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Shepherd 2 of Nativity",
         "amount": "£30",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Shepherd 3 of Nativity",

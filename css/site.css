@@ -15,3 +15,15 @@ html {
     max-width: 370px; 
     height: auto;
 }
+
+h4 {
+    color: #343a40;
+}
+
+.badge-primary {
+    background-color:  #343a40;
+}
+
+.list-group {
+    margin-right: 100px;
+}
