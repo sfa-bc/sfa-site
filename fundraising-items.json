@@ -47,42 +47,42 @@
     {
         "item": "Shepherd 3 of Nativity",
         "amount": "£30",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Shepherd 4 of Nativity",
         "amount": "£30",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Sheep 1 of Nativity",
         "amount": "£25",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Sheep 2 of Nativity",
         "amount": "£25",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Sheep 3 of Nativity",
         "amount": "£25",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Sheep 4 of Nativity",
         "amount": "£25",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Sheep 5 of Nativity",
         "amount": "£25",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Sheep 6 of Nativity",
         "amount": "£25",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Lamb 1 of Nativity",
@@ -220,7 +220,7 @@
         "donated": false
     },
     {
-        "item": "Stylised Building behind the Our Lady",
+        "item": "Stylised Building behind Our Lady",
         "amount": "£750",
         "donated": false
     },
@@ -245,7 +245,7 @@
         "donated": false
     },
     {
-        "item": "Decoration of alter rails",
+        "item": "Decoration of altar rails",
         "amount": "£200",
         "donated": false
     },
