@@ -87,12 +87,12 @@
     {
         "item": "Lamb 1 of Nativity",
         "amount": "£20",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Lamb 2 of Nativity",
         "amount": "£20",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Seraph 1",
