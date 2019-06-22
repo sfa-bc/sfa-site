@@ -117,7 +117,7 @@
     {
         "item": "Abraham",
         "amount": "£500",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Angel Guests",
@@ -127,7 +127,7 @@
     {
         "item": "Sara",
         "amount": "£500",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Abraham & Isaac",
@@ -177,7 +177,7 @@
     {
         "item": "Cross in Glory",
         "amount": "£1,000",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Angel 1 of Apocalypse",
