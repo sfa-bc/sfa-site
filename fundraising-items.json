@@ -192,7 +192,7 @@
     {
         "item": "Bethlehem & Sheep",
         "amount": "£1,000",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Jerusalem & Sheep",
