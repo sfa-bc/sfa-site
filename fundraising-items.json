@@ -12,7 +12,7 @@
     {
         "item": "St Paul",
         "amount": "£3,000",
-        "donated": false
+        "donated": true
     },
     {
         "item": "Bl. Robert Grissold",
