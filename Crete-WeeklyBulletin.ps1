@@ -1,5 +1,5 @@
 param(
-    [Parameter(Mandatory=$false)] 
+    [Parameter(Mandatory=$true)] 
     [String]$rtfFilename,
 
     [Parameter(Mandatory=$false)] 
@@ -7,26 +7,24 @@ param(
 )
 
 # Open in Word file and Save as Web Filtered
+Write-Output "Source file: $rtfFilename"
 $wordApp = New-Object -ComObject Word.Application
 $wordApp.Visible = $True
-$doc = $wordApp.Documents.Open("d:\sf bulletin 32b 2021.wps.rtf")
+$doc = $wordApp.Documents.Open($rtfFilename)
 
-$saveFormat = [Microsoft.Office.Interop.Word.WdSaveFormat]::wdFormatFilteredHTML
-$doc.SaveAs("d:\sf bulletin 32b 2021.wps.htm", [ref]$saveFormat)
+$htmFilename = [IO.Path]::Combine([IO.Path]::GetDirectoryName($rtfFilename), [IO.Path]::GetFileNameWithoutExtension($rtfFilename) + ".htm")
+Write-Output "Target file: $htmFilename"
+$saveFormat = 10 # [Microsoft.Office.Interop.Word.WdSaveFormat]::wdFormatFilteredHTML
+$doc.SaveAs($htmFilename, [ref]$saveFormat)
 $doc.Close()
 $wordApp.Quit()
 
-# https://ss64.com/ps/syntax-word.html
-
-#$filename = 'C:\work\Demo99.docx'
-#$saveFormat = [Microsoft.Office.Interop.Word.WdSaveFormat]::wdFormatDocumentDefault
-#$mydoc.SaveAs([ref][system.object]$filename, [ref]$saveFormat)
-#$mydoc.Close()
-#$MSWord.Quit()
-
 # Copy to bulletins folder
+$bulletinsFolder = "D:\Work\Sites\sfa-site\bulletins"
+$htmDestinationFilename = [IO.Path]::Combine($bulletinsFolder, [IO.Path]::GetFileName($htmFilename))
+Write-Output "Copying $htmFilename to $bulletinsFolder ..."
+Copy-Item -Path $htmFilename -Destination $htmDestinationFilename
 
 # Add new file tp source control. git add, commit & push
-
-Write-Output "Source file: $rtfFilename"
-Write-Output "Target file: $htmFilename"
+git add $htmDestinationFilename
+git commit -m "Add weekly bulletin $([IO.Path]::GetFileNameWithoutExtension($rtfFilename))"
