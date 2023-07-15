@@ -19,11 +19,14 @@ $(function () {
         var dateString = getBulletinDate(bulletin.name);
         var friendlyName = getBulletinFriendlyName(bulletin.name);
 
-        var tr = "<tr><td scope=\"row\">" + dateString + "</td>";
-            tr += "<td><a href=\"weekly-bulletin.html?bulletin=" + bulletin.path + "\">" + friendlyName + "</a></td>";
-            tr += "</tr>";
+        // Filter our folders used for images
+        if (!friendlyName.trim() == "") {
+            var tr = "<tr><td scope=\"row\">" + dateString + "</td>";
+                tr += "<td><a href=\"weekly-bulletin.html?bulletin=" + bulletin.path + "\">" + friendlyName + "</a></td>";
+                tr += "</tr>";
 
-        bulletinList.append(tr);
+            bulletinList.append(tr);
+        }
     }
 
     function getBulletinDate(bulletinName) {
