@@ -59,8 +59,6 @@ $(function () {
 
     function getBulletinFriendlyName(bulletinName) {
 
-        var friendlyName = bulletinName;
-
         // Expected naming convention "yyyy-mm-dd name of file.html | .htm"
         var regex = /\D*\d+\D\d+\D\d+/;
         var datePart = regex.exec(bulletinName.trim());
@@ -72,14 +70,14 @@ $(function () {
             else if (endsWith(bulletinName.toLowerCase(), ".htm")) {
                 extensionLength = -4;
             }
-            friendlyName = bulletinName.slice(datePart[0].length, extensionLength).trim(); // -5 => .html | -4 => .htm
-            // friendlyName = bulletinName.substring(datePart[0].length, bulletinName.length - extensionLength - datePart[0].length);
+            var friendlyName = bulletinName.slice(datePart[0].length, extensionLength).trim(); // -5 => .html | -4 => .htm
+            return friendlyName;
         }
         else {
             console.warn("Failed to locate the date as part of the filename. " + bulletinName);
         }
         
-        return friendlyName;
+        return "";
     }
 
     function endsWith(s, suffix) {
