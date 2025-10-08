@@ -19,8 +19,11 @@ $doc.SaveAs($htmFilename, [ref]$saveFormat)
 $doc.Close()
 $wordApp.Quit()
 
+# Replace the image tag xxx with 
+(Get-Content $htmFilename) -replace 'src="[^"]*/image001\.png"', 'src="bulletins/images/image001.png"' | Set-Content $htmFilename
+
 # Copy to bulletins folder
-$bulletinsFolder = "D:\Work\Sites\sfa-site\bulletins"
+$bulletinsFolder = Join-Path $PSScriptRoot "bulletins"
 $htmDestinationFilename = [IO.Path]::Combine($bulletinsFolder, [IO.Path]::GetFileName($htmFilename))
 Write-Output "Copying $htmFilename to $bulletinsFolder ..."
 Copy-Item -Path $htmFilename -Destination $htmDestinationFilename
