@@ -20,8 +20,8 @@ $doc.Close()
 $wordApp.Quit()
 
 # Replace the image tag xxx with 
-(Get-Content $htmFilename) -replace 'src=".*?image001\.png"', 'src="bulletins/images/year-of-st-francis.jpg"' | Set-Content $htmFilename
-(Get-Content $htmFilename) -replace 'src=".*?image002\.jpg"', 'src="bulletins/images/image002.png"' | Set-Content $htmFilename
+(Get-Content $htmFilename -Raw) -replace 'src=".*?image001\.png"', 'src="bulletins/images/year-of-st-francis.jpg"' | Set-Content $htmFilename
+(Get-Content $htmFilename -Raw) -replace 'src=".*?image002\.jpg"', 'src="bulletins/images/image002.png"' | Set-Content $htmFilename
 
 # Copy to bulletins folder
 $bulletinsFolder = Join-Path $PSScriptRoot "bulletins"
