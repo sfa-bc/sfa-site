@@ -20,7 +20,7 @@ $(function () {
         $("#bulletin-content").html(
             '<div class="bulletin-pdf-viewer">' +
             '<iframe src="' + googleViewerUrl + '" width="100%" height="900" style="border: none;" title="Bulletin PDF"></iframe>' +
-            '<p class="mt-2"><a href="' + pdfUrl + '" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p>' +
+            '<p class="mt-2"><a href="' + pdfUrl + '">Open PDF</a></p>' +
             '</div>'
         );
         return;

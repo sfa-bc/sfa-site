@@ -25,7 +25,7 @@ $(function () {
         if (friendlyName.trim() !== "") {
             var bulletinUrl = getBulletinUrl(bulletin);
             var tr = "<tr><td scope=\"row\">" + dateString + "</td>";
-                tr += "<td><a href=\"" + bulletinUrl + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + friendlyName + "</a></td>";
+                tr += "<td><a href=\"" + bulletinUrl + "\">" + friendlyName + "</a></td>";
                 tr += "</tr>";
 
             bulletinList.append(tr);
