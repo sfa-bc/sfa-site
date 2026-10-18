@@ -12,21 +12,34 @@ $(function () {
     });
 
     function addBulletin(bulletin) {
+        if (bulletin.type !== "file") {
+            return;
+        }
 
-        var bulletinList = $("#bulleting-list > tbody")
-        console.assert(bulletinList);
+        var bulletinList = $("#bulleting-list > tbody");
+        console.assert(bulletinList.length > 0);
 
         var dateString = getBulletinDate(bulletin.name);
         var friendlyName = getBulletinFriendlyName(bulletin.name);
 
-        // Filter our folders used for images
-        if (!friendlyName.trim() == "") {
+        if (friendlyName.trim() !== "") {
+            var bulletinUrl = getBulletinUrl(bulletin);
             var tr = "<tr><td scope=\"row\">" + dateString + "</td>";
-                tr += "<td><a href=\"weekly-bulletin.html?bulletin=" + bulletin.path + "\">" + friendlyName + "</a></td>";
+                tr += "<td><a href=\"" + bulletinUrl + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + friendlyName + "</a></td>";
                 tr += "</tr>";
 
             bulletinList.append(tr);
         }
+    }
+
+    function getBulletinUrl(bulletin) {
+        var fileName = bulletin.name.toLowerCase();
+
+        if (endsWith(fileName, ".pdf")) {
+            return bulletin.download_url || "https://github.com/sfa-bc/sfa-site/raw/main/" + bulletin.path;
+        }
+
+        return "weekly-bulletin.html?bulletin=" + encodeURIComponent(bulletin.path);
     }
 
     function getBulletinDate(bulletinName) {
@@ -59,7 +72,7 @@ $(function () {
 
     function getBulletinFriendlyName(bulletinName) {
 
-        // Expected naming convention "yyyy-mm-dd name of file.html | .htm"
+        // Expected naming convention "yyyy-mm-dd name of file.html | .htm | .pdf"
         var regex = /\D*\d+\D\d+\D\d+/;
         var datePart = regex.exec(bulletinName.trim());
         if (datePart && datePart.length > 0) {
@@ -70,13 +83,17 @@ $(function () {
             else if (endsWith(bulletinName.toLowerCase(), ".htm")) {
                 extensionLength = -4;
             }
-            var friendlyName = bulletinName.slice(datePart[0].length, extensionLength).trim(); // -5 => .html | -4 => .htm
+            else if (endsWith(bulletinName.toLowerCase(), ".pdf")) {
+                extensionLength = -4;
+            }
+
+            var friendlyName = bulletinName.slice(datePart[0].length, extensionLength).trim();
             return friendlyName;
         }
         else {
             console.warn("Failed to locate the date as part of the filename. " + bulletinName);
         }
-        
+
         return "";
     }
 
