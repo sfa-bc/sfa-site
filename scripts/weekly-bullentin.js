@@ -1,9 +1,32 @@
 $(function () {
 
     var url = window.location.href;
-    var bulletinUrl = getParameterByName(url, "bulletin");
+    var bulletinPath = getParameterByName(url, "bulletin");
 
-    $("#bulletin-content").load(encodeURI(bulletinUrl));
+    if (!bulletinPath) {
+        $("#bulletin-content").html("<p>No bulletin selected.</p>");
+        return;
+    }
+
+    var lowerPath = bulletinPath.toLowerCase();
+
+    if (lowerPath.endsWith(".pdf")) {
+        var pdfUrl = bulletinPath.indexOf("http") === 0
+            ? bulletinPath
+            : "https://raw.githubusercontent.com/sfa-bc/sfa-site/gh-pages/" + bulletinPath.replace(/^\/+/, "");
+
+        var googleViewerUrl = "https://docs.google.com/viewer?embedded=true&url=" + encodeURIComponent(pdfUrl);
+
+        $("#bulletin-content").html(
+            '<div class="bulletin-pdf-viewer">' +
+            '<iframe src="' + googleViewerUrl + '" width="100%" height="900" style="border: none;" title="Bulletin PDF"></iframe>' +
+            '<p class="mt-2"><a href="' + pdfUrl + '" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p>' +
+            '</div>'
+        );
+        return;
+    }
+
+    $("#bulletin-content").load(encodeURI(bulletinPath));
 
     function getParameterByName(url, name) {
 

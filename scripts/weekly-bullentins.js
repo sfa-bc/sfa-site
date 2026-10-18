@@ -36,9 +36,11 @@ $(function () {
         var fileName = bulletin.name.toLowerCase();
 
         if (endsWith(fileName, ".pdf")) {
-            return bulletin.download_url || "https://github.com/sfa-bc/sfa-site/raw/main/" + bulletin.path;
+            return "weekly-bulletin.html?bulletin=" + encodeURIComponent(bulletin.download_url || bulletin.path);
         }
 
+        // Always route through the bulletin viewer so it can decide
+        // whether to load HTML directly or render a PDF inline.
         return "weekly-bulletin.html?bulletin=" + encodeURIComponent(bulletin.path);
     }
 
